@@ -1,13 +1,18 @@
 # https://codility.com/demo/take-sample-test/binary_gap
 
+# Answer from https://github.com/mrhead/codility
+
 def binary_gap(n)
+  return 0 if n.class.to_s == /Fixnum/
   s = '%b' % n
 
   zeroes = s.split('1')
-  zeroes.pop if n % 2 == 0
+  zeroes.pop if n % 2 == 0 # remove last array if remainder not equals 0
 
   return 0 if zeroes.empty?
-  zeroes.map { |zeroes| zeroes.length }.max
+  zeroes.map { |zeroes|
+    zeroes.length
+  }.max
 end
 
 require 'minitest/autorun'

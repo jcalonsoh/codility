@@ -34,3 +34,5 @@ class Tests < MiniTest::Unit::TestCase
     assert_equal 3, equilibrium([-7, 1, 5, 2, -4, 3, 0])
   end
 end
+
+ 3, 1, 2, 4, 3
